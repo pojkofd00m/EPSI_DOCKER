@@ -1,0 +1,8 @@
+- Schéma réseau (visio)
+- images : 
+		- SQL (MySQL) (1) (Franck)
+		- data (2) (Seb)
+		- php (php5-fpm) (2) (Seb)
+		- nginx (1) (Seb)
+- Script démarrage et arrêt des dockers (bon ordre : data, sql, php, nginx)
+- Doc
