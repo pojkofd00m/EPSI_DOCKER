@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER m.sebastien.g@gmail.com
+MAINTAINER m.sebastien.gm@gmail.com
 
 RUN apt-get update && apt-get install -y nano wget dialog net-tools procps inetutils-telnet curl
 RUN mkdir /app
