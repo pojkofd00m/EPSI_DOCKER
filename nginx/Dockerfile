@@ -5,12 +5,13 @@ RUN apt-get update && apt-get install -y nano wget dialog net-tools procps inetu
 RUN mkdir /app
 
 RUN apt-get install -y nginx-full
-
-RUN rm -v /etc/nginx/nginx.conf
-RUN mkdir -p /app/conf /app/docs
+RUN rm -R /etc/nginx/nginx.conf
+RUN mkdir -p /app/docs
+RUN echo "<h1>!!! Hello World !!!</h1>" > /app/docs/index.html
 
 ADD index.html /app/docs/
-ADD nginx.conf /app/conf/
+ADD nginx.conf /etc/nginx/
+ADD php5-fpm.conf /etc/nginx/conf.d/
 
 EXPOSE 80
-CMD nginx -c /app/conf/nginx.conf
+CMD nginx 
